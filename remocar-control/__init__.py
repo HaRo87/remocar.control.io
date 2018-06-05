@@ -1,7 +1,6 @@
 '''
  Copyright (C) 2018 Robert Hansel
- All rights reserved.
  
  This software may be modified and distributed under the terms
- of the BSD license.  See the LICENSE file for details.
+ of the MIT license.  See the LICENSE file for details.
 '''
