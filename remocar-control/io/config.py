@@ -53,7 +53,7 @@ class MotorConfig:
             self.gpioLowPin = gpioLowPin
         else:
             raise ControlConfigError(gpioLowPin, 'must be >=2 and <= 26!')
-        if 2 <= gpioHighPin <= 26:
+        if 2 <= gpioEnaPin <= 26:
             self.gpioEnaPin = gpioEnaPin
         else:
             raise ControlConfigError(gpioEnaPin, 'must be >=2 and <= 26!')
