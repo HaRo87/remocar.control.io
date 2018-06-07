@@ -39,10 +39,16 @@ def test_motorconfig_ena_pin_violation_higher_boundary_thows_error():
         MotorConfig(MotorType.MOVEMENT, 3, 23, 27)
     assert str(err_info.value) == "(27, 'must be >=2 and <= 26!')"
 
-def test_correct_config():
+def test_correct_config_movement():
     motorConfig = MotorConfig(MotorType.MOVEMENT, 2, 4, 3)
     assert motorConfig.motorType == MotorType.MOVEMENT
     assert motorConfig.gpioHighPin == 2
     assert motorConfig.gpioLowPin == 4
     assert motorConfig.gpioEnaPin == 3
-    
+
+def test_correct_config_steering():
+    motorConfig = MotorConfig(MotorType.STEERING, 2, 4, 3)
+    assert motorConfig.motorType == MotorType.STEERING
+    assert motorConfig.gpioHighPin == 2
+    assert motorConfig.gpioLowPin == 4
+    assert motorConfig.gpioEnaPin == 3
